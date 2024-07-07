@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <style media="screen">
+    /* Page Content */
+    .content {
+      padding: 20px;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #3dc970;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #0F3D3E;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="D:\Web development\TheGarbageWallah\GW4.html">Home</a>
+      <a href="D:\Web development\HTMl - Personal Site\newlogin_page.html">Book Appointment</a>
+      <a href="file:///D:/Web%20development/TheGarbageWallah/Services.html">RateCard</a>
+      <div class="dropdown">
+        <button class="dropbtn">Tieup
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="D:\Web development\TheGarbageWallah\Signup_page.html">Join as Vendor</a>
+          <a href="#">Corporate Tie Up</a>
+        </div>
+      </div>
+      <a href="#aboutus">About Us</a>
+
+    </div>
+    <div class="container-fluid">
+      <div id="ratecard-calculator" class="rateCalculator hide">
+        <div class="center junkart-container">
+          <div id="calculator-panel" class="calculator-panel">
+            <div class="content">
+              <div class="cross">
+                <div class="toggleRateCalculator fa fa-times ratecard-calc-cross"></div>
+                <div class="selected_items"></div>
+              </div>
+              <div class="cross">
+                <div class="fa fa-rupee">&nbsp;</div><span class="rate"></span>
+              </div>
+            </div>
+          </div>
+          <div class="xfvz text-left"><b>Please choose an item</b></div>
+          <div id="ratecardContainer"><input placeholder="Search Rate Card" class="search">
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="junkart-container">
+        <div class="container-rate text-center">
+          <div class="page-header">
+            <h1>Rate Card</h1>
+          </div>
+          <div class="alert alert-info noteRateCard"><strong>NOTE</strong>
+            <div class="noteText"> • Second-hand item prices may vary according to its condition and working.</div>
+            <div class="noteText"> • All recyclable item prices may vary according to its market prices.</div>
+          </div>
+          <div style="margin-top: 15px; padding-right: 50px; padding-bottom: 10px; padding-left: 50px;" class="row">
+            <div class="col-lg-6 text-left">
+              <div class="btn btn-primary toggleRateCalculator">RateCard Calculator</div>
+            </div>
+            <div class="col-lg-6 text-right">Your City &nbsp;&nbsp;<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);" class="btn btn-default small">City<option
+                  value="/view/ratecard">Bhopal</option>
+                <option value="/view/ratecard?city=blr">Kanpur</option>
+                <option value="/view/ratecard?city=mum">Motihari</option>
+                <option value="/view/ratecard?city=blr">Lucknow</option>
+                <option value="/view/ratecard?city=mum">Varanasi</option>
+              </select></div>
+          </div>
+          <div class="row text-center">
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/ocDajoTa25FtKCusracdD2e2PMVlNFsjj-X94Lc-pGNSAsCA1gAR333fJYVCD2wscWU=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Air Conditioner 2 ton</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 3000/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/53G4LXb4jeiN9QNU55wQyT88HKllKXc14ChgjtMGClotO3dsmM1lB7JZgPIpkLeWDS0=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Air Conditioner 1.5 ton</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 2500/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/jwmBfUZ4Iue-aOQWJbfQQSbfKzN5rMW05zEZMwQJWDL54y3SEobF3Fp4VfuYsE21HQc=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Air Conditioner 2.5 ton</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 3500/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="After vendor visit these will be negotiable " ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/T2rUPZi6ACmlWwY0LUfzoT4Q2n91cx5xmYLBG5eDmxauXEN0zFRXxtQHfbL2c1Zsz-g=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Air conditioner 1 ton</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 2000/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>After vendor visit these will be negotiable </p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/B2hTWTPzWOAZ0aEJjKQdAcRjCLm7z6QN3ZnsSnpzi8oswnDGwcOiJK_p0UCvTKKigSs=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Aluminium</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 90/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh6.googleusercontent.com/FhSSQdtDVTm58DY4a8XTAkYGJ50xbKMWs1f5CWOAt2COPQS3NinRnJPrOZJY1NLx89A=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Automatic Washing Machine</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 700/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/htHJbO1kKsgn1xR6Y7UVfbqfSj0emNVEL7I4SpESm-FP9f3LYJl-6dAOVQfkMhuXIXA=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Bicycle (Large)</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 200/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="file:///C:/Users/vibhu/OneDrive/Desktop/Bicycle%20Kid.webp" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Bicycle (Small)</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 100/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit.." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh6.googleusercontent.com/BBrBl_ZYHwgABvmR8yau8pyWa1O1IvVEl3hoZW4JWqSOm1X2-t47ynF8_KgUnflR8ew=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Big Iron Cooler</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 500/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit..</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="file:///C:/Users/vibhu/OneDrive/Desktop/jumbo-plastic-body-air-cooler-500x500.webp" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Big Plastic Cooler </div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 200/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh6.googleusercontent.com/f6J-DDJRLAMmZ8uq8QANJsBBS4hQmpB5WLZnP9kvGcjy_4VRpta-sqEa2RcRgne4TQc=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Big Stand Fan</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 250/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/UHNbegiw8MTx2X5mrQEpgcFcDqX9xps1tznhOdJqJvFjy4yRjaUj0XiSWI3WSJdApVE=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Books</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 12/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Fixed Price" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh3.googleusercontent.com/hvjnmxlfdAs0J3cG8fIcBUZUdZbySOL1tZAxfQALurFPoGZhw1PD_gMMxFCYE8qmEC4=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Brass</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 290/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Fixed Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/efQ7xHU03rpodD_7vaIIHf3TyfaoFcwM9bIx0HNr--Qfs4OQTkB4wCrhhRjqAN2855U=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">CRT TV 14 Inch </div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 100/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/Q9U6hTtm2gxbNZviaShQz-xbzL3NncN0106mJJ5ocsSNXazENhS7TBmWdfmOtaiK3AM=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">CRT TV 21 Inch</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 150/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/9Xu7KSx-Vd-Bjh6jFN4EFMjGRmkoNHdyuP2PUG48TNSg7b97tKDMD3A5_xK6bhKafTg=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">CRT TV 29 Inch</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 200/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is indicative price and is subjected to change according to the condition of your CAR starting from 5000 " ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/i_ZWUA356bDYl9nuQMUi3tENp50X_Ot0S6JiCbwdKE8S0NG_KyS-F4jjQXnDWTgHb9E=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Car</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 18000/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is indicative price and is subjected to change according to the condition of your CAR starting from 5000 </p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Fixed Price" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh3.googleusercontent.com/cuxpFxaCPqQ_ZX7ATZqRzN_fjN2gzUQlXmGyuYle86nndm_ZhbSh8F76PeRcfocllJE=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Carton</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 9/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Fixed Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Price ranges from  ₹70 -  ₹330" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/7acGowKENcjMJpy9d1c6nb53zgMJEmVEZLaRNu5nLfOLSoef-IJ9wuQD2fZRhypNw2I=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Copper</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 380/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Price ranges from ₹70 - ₹330</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Fixed Price" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh3.googleusercontent.com/dUIB7gbyLU6p58wqdg-V2UvvXRtFZDc7V-slIY46CH6kIfvFi_3APynAIwl5-Oqldkw=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">E-Waste</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 40/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Fixed Price</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Fixed Price" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/nyexqY4Lopws93mIYzsAW85XlDWnXu4Zggoueb2TPKuOXG-j5ErxW56Bz7QR5JAMGvs=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Iron</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 25/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Fixed Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh5.googleusercontent.com/bPNAbixX9N0kpvvK6l9_X-o8kT2riRS4JqyEW1LEr_727Q_QOC4DDb-0gX26BY4Bqr8=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Iron Chair</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 25/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Fixed Price" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh3.googleusercontent.com/Ge-nfhjVYx-GgtX5UrHc29YvUp4MiddFwhydusNrEqd9SuUaJb9NJxX7UZJXWuX4yRs=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Newspaper</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 12/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Fixed Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Fixed Price" ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh6.googleusercontent.com/WotKxXO-b1smVVwoTc_xS_4DaPZzg6omZ0XDW6smvFxiiiS9Jw8-agdZz45PhNyWprY=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Plastic</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 12/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Fixed Price</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price only for iron and is subjected to change on vendor visit. " ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh3.googleusercontent.com/bqHj7pp5-UUOaIFU6FWZYesDq3Xp9bcOeG4N3hZBusGP-XI1LlTv6Q69vQaIvndtk78=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Revolving Chair</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 20/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price only for iron and is subjected to change on vendor visit. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="*This is an indicative price and is subjected to change on vendor visit." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh3.googleusercontent.com/ARE1H4gw_yftd12qzgn_BG9buqsR39Wi8jigYSSK62uRmLv_FvbcaAS2VNYXpO8PiK8=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Semi-Auto. Washing Machine</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 300/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>*This is an indicative price and is subjected to change on vendor visit.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Market prices fall due to lockdown....." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh6.googleusercontent.com/hVvKydr2Jin4VXn0Fe6_wQ9Vu0doZyiYZjcxAkJzfFnaNcOEFrmKSt3N8PnJWsBzs1o=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Small Stand Fan</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 200/piece</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Market prices fall due to lockdown.....</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Market prices fall due to lockdown....." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/egy4aZ0sE7xiQpgqpncl80WsvUZ5DoPlk5bFIkHSwh78vN-Qp2sgQSFGcVxF8UBgr5s=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Steel</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 35/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Market prices fall due to lockdown.....</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Market prices fall due to lockdown....." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="file:///C:/Users/vibhu/OneDrive/Desktop/a4-size-ruled-paper-notebook-500x500.webp" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Ruled Paper</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 10/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Market prices fall due to lockdown.....</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container">
+              <div data-toggle="tooltip" title="Market prices fall due to lockdown....." ontouchstart="this.classList.toggle('hover');" class="col-sm-2 flipper rate-col">
+                <div class="item front">
+                  <div class="label-img"><span class="centerer"></span><img src="https://lh4.googleusercontent.com/egy4aZ0sE7xiQpgqpncl80WsvUZ5DoPlk5bFIkHSwh78vN-Qp2sgQSFGcVxF8UBgr5s=w2400" class="rate-icon spin-icon"></div>
+                  <div class="label-block">
+                    <div class="article-name">Plain Paper</div>
+                    <div class="article-rate"><i class="fa fa-rupee"> 8/kg</i></div>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Market prices fall due to lockdown.....</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Signup Page </title>
+<style>
+/* Page Content */
+.content {
+  padding: 20px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #3dc970;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #0F3D3E;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: #E7F6F2;
+}
+button {
+       background-color: #4CAF50;
+       width: 100%;
+        color: #E7F6F2;
+        padding: 15px;
+        margin: 10px 0px;
+        border: none;
+        cursor: pointer;
+         }
+ form {
+        border: 3px solid #f1f1f1;
+    }
+ input[type=text], input[type=password] {
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 2px solid green;
+        box-sizing: border-box;
+    }
+ button:hover {
+        opacity: 0.7;
+    }
+  .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        margin: 10px 5px;
+    }
+
+
+ .container {
+        padding: 25px;
+        background-color: lightblue;
+    }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="D:\Web development\TheGarbageWallah\GW4.html">Home</a>
+    <a href="D:\Web development\HTMl - Personal Site\newlogin_page.html">Book Appointment</a>
+    <a href="file:///D:/Web%20development/TheGarbageWallah/Services.html">RateCard</a>
+    <div class="dropdown">
+      <button class="dropbtn">Tieup
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="D:\Web development\TheGarbageWallah\Signup_page.html">Join as Vendor</a>
+        <a href="#">Corporate Tie Up</a>
+      </div>
+    </div>
+    <a href="#aboutus">About Us</a>
+
+  </div>
+    <center> <h1> Join us as a Vendor </h1> </center>
+    <form>
+        <div class="container">
+          <label>First Name :</label>
+          <input type="text" placeholder="Enter First Name" name="First Name" required>
+          <label>Last Name :</label>
+          <input type="text" placeholder="Enter Middle Name" name="Middle Name" >
+          <label>Name of Company :</label>
+          <input type="text" placeholder="Enter Company Name" name="Last Name" required>
+          <label>Address of Company :</label>
+          <input type="text" placeholder="Enter Company Address" name="Last Name" required>
+          <br>
+          <label>Mobile Number :</label>
+          <input type="tel" placeholder="Enter your mobile number" name="Mobile number" required>
+          <br>
+          <br>
+          <label>E-Mail Id :</label>
+          <input type="email" placeholder="Enter E-mail address" name="E-mail address" required>
+          <br>
+          <br>
+            <label>Username : </label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Signup</button>
+            <input type="checkbox" checked="checked"> Remember me
+            <button type="button" class="cancelbtn"> Cancel</button>
+
+        </div>
+    </form>
+</body>
+</html>
